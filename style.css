@@ -126,3 +126,93 @@ ul {
   height: 40vh;
   padding-top: 2%;
 }
+/* main 3 */
+.main_3 {
+  display: flex;
+}
+.pic {
+  width: 25vw;
+  height: 74vh;
+  position: relative;
+  left: 7vw;
+  margin-top: 20px;
+}
+.pic_1 {
+  margin-bottom: 5px;
+}
+.pic3 {
+  background-image: url("assets/pic3.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 66.5vh;
+  width: 60vw;
+  position: relative;
+  left: 7.5vw;
+  top: 20px;
+}
+.pic_conti {
+  color: #ffffff;
+  height: 50%;
+  width: 50%;
+  margin-top: 10vw;
+  margin-left: 5vw;
+  font-size: larger;
+}
+h1 {
+  font-weight: bolder;
+}
+/* main 4 */
+.main_4 {
+  display: flex;
+  margin-top: 8px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 8px;
+}
+#main_dory {
+  background-image: url("assets/dory.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 28vw;
+  height: 45vh;
+  padding-top: 2%;
+}
+#main_win {
+  background-image: url("assets/home_square-Recovered.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 28vw;
+  height: 45vh;
+  padding-top: 2%;
+  position: relative;
+  color: #ffffff;
+}
+#main_dream {
+  background-image: url("assets/bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 28vw;
+  height: 45vh;
+  padding-top: 2%;
+  color: #ffffff;
+}
+.win_overlay {
+  width: 300px;
+  height: 200px;
+}
+.dis_overlay {
+  width: 70px;
+  height: 62px;
+  position: absolute;
+  right: 0;
+  top: 90%;
+  transform: translateY(-50%);
+}
+strong {
+  margin-left: 95px;
+}
