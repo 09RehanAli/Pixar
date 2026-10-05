@@ -39,14 +39,18 @@ ul {
   flex-wrap: wrap;
   gap: 45px;
 }
+.fa-solid {
+  display: none;
+}
 /* hero section */
 .hero {
   width: 100%;
   height: 95vh;
+  position: relative;
 }
 .hero_img {
   position: absolute;
-  top: 90px;
+  top: 0px;
   left: 11%;
   max-height: 90%;
   max-width: 80%;
@@ -200,6 +204,7 @@ h1 {
   height: 45vh;
   padding-top: 2%;
   color: #ffffff;
+  position: relative;
 }
 .win_overlay {
   width: 300px;
@@ -215,4 +220,195 @@ h1 {
 }
 strong {
   margin-left: 95px;
+}
+
+/* ---------- Tablet (up to 1024px) ---------- */
+@media (max-width: 1024px) {
+  ul {
+    display: none;
+  }
+  .fa-solid {
+    display: block;
+  }
+  .hero_img {
+    left: 5%;
+    max-width: 90%;
+  }
+
+  #main_gatto,
+  #main_hop {
+    height: 40vh;
+  }
+
+  #main_ghost,
+  #main_i3,
+  #main_coco,
+  #main_dory,
+  #main_win,
+  #main_dream {
+    width: 31vw;
+    height: 35vh;
+  }
+
+  .win_overlay {
+    width: 100%;
+    height: auto;
+  }
+
+  strong {
+    margin-left: 15px;
+    font-size: 11px;
+  }
+
+  .pic {
+    width: 30vw;
+    left: 4vw;
+  }
+
+  .pic3 {
+    width: 62vw;
+    left: 5vw;
+  }
+
+  .pic_conti {
+    margin-top: 6vw;
+    font-size: 1rem;
+  }
+}
+
+/* ---------- Mobile (up to 768px) ---------- */
+@media (max-width: 768px) {
+  /* nav */
+  .nav {
+    height: auto;
+    padding: 16px 5vw;
+  }
+  .nav_logo {
+    max-width: 120px;
+  }
+  ul {
+    gap: 14px;
+    font-size: 12px;
+  }
+
+  /* hero */
+  .hero {
+    height: 60vh;
+  }
+  .hero_bg {
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero_img {
+    top: 0;
+    left: 5%;
+    max-width: 90%;
+  }
+
+  /* main 1 */
+  #main_gatto,
+  #main_hop {
+    width: 92%;
+    height: 30vh;
+  }
+  .gatto_overlay {
+    position: relative; /* no more absolute offsets */
+    left: 5%;
+    max-width: 45%;
+  }
+  .hop_overlay {
+    max-width: 55%;
+    left: 4%;
+    margin-top: 4%;
+  }
+
+  /* main 2 and main 4: stack the cards */
+  .main_2,
+  .main_4 {
+    flex-direction: column;
+    gap: 10px;
+  }
+  #main_ghost,
+  #main_i3,
+  #main_coco {
+    width: 92%;
+    height: 50vh;
+  }
+  #main_dory,
+  #main_win,
+  #main_dream {
+    width: 92%;
+    height: 40vh;
+  }
+  .ghost_overlay {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+  .win_overlay,
+  .dream_overlay {
+    max-width: 245px;
+    height: 140px;
+    margin: 0 auto;
+  }
+  strong {
+    margin-left: 40%;
+    font-size: 12px;
+  }
+  .dis_overlay {
+    margin-right: 45%;
+  }
+  /* main 3: stack the images and the careers box */
+  .main_3 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pic {
+    width: 92%;
+    height: auto;
+    left: 0;
+    display: flex;
+    gap: 8px;
+  }
+  .pic_1,
+  .pic_2 {
+    flex: 1;
+    margin-bottom: 0;
+  }
+  .pic3 {
+    width: 92%;
+    height: auto;
+    min-height: 50vh;
+    left: 0;
+    top: 0;
+    margin-top: 10px;
+  }
+  .pic_conti {
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10vw 0;
+    font-size: 1rem;
+  }
+}
+
+/* ---------- Small phones (up to 480px) ---------- */
+@media (max-width: 480px) {
+  ul {
+    gap: 10px;
+    font-size: 11px;
+  }
+  .hero {
+    height: 45vh;
+  }
+  #main_ghost,
+  #main_i3,
+  #main_coco,
+  #main_dory,
+  #main_win,
+  #main_dream {
+    height: 32vh;
+  }
+  .pic_conti h1 {
+    font-size: 1.4rem;
+  }
 }
