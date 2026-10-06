@@ -207,8 +207,9 @@ h1 {
   position: relative;
 }
 .win_overlay {
-  width: 300px;
-  height: 200px;
+  width: 240px;
+  height: 210px;
+  margin-left: 20%;
 }
 .dis_overlay {
   width: 70px;
