@@ -219,8 +219,38 @@ h1 {
   top: 90%;
   transform: translateY(-50%);
 }
-strong {
+.stream {
   margin-left: 95px;
+}
+.foot_a {
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #f6f6f4;
+  margin-top: 40px;
+  padding-top: 40px;
+  height: 40vh;
+  width: 100%;
+}
+.footer {
+  position: relative;
+  top: 40%;
+}
+.foot_s {
+  margin-bottom: 10px;
+}
+.a_all {
+  display: flex;
+  gap: 100px;
+  position: relative;
+  top: 20%;
+}
+a {
+  text-decoration: none;
+  color: rgb(53, 52, 52);
 }
 
 /* ---------- Tablet (up to 1024px) ---------- */
