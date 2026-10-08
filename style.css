@@ -305,6 +305,10 @@ a {
     margin-top: 6vw;
     font-size: 1rem;
   }
+  .foot_last {
+    position: relative;
+    gap: 10px;
+  }
 }
 
 /* ---------- Mobile (up to 768px) ---------- */
