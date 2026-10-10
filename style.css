@@ -252,7 +252,12 @@ a {
   text-decoration: none;
   color: rgb(53, 52, 52);
 }
-
+.foot_last {
+  padding-top: 20px;
+}
+a:hover {
+  cursor: pointer;
+}
 /* ---------- Tablet (up to 1024px) ---------- */
 @media (max-width: 1024px) {
   ul {
