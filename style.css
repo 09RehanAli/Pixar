@@ -232,7 +232,7 @@ footer {
   background-color: #f6f6f4;
   margin-top: 40px;
   padding-top: 40px;
-  height: 40vh;
+  min-height: 40vh;
   width: 100%;
 }
 .footer {
@@ -429,6 +429,10 @@ a:hover {
     padding: 10vw 0;
     font-size: 1rem;
   }
+}
+.a_all {
+  display: flex;
+  flex-direction: column;
 }
 
 /* ---------- Small phones (up to 480px) ---------- */
