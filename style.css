@@ -1,19 +1,54 @@
-* {
-  margin: 0px;
-  box-sizing: border-box;
-  padding: 0px;
+/* =========================================================
+   Pixar clone – responsive stylesheet
+   Approach: fluid sizes (%, clamp, aspect-ratio, grid/flex)
+   instead of fixed px/vh heights, and overlays positioned
+   relative to their own card. Breakpoints only change layout.
+   ========================================================= */
+
+:root {
+  --text: rgb(53, 52, 52);
+  --footer-bg: #f6f6f4;
+  --gap: 8px;
+  --content-width: 85%;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   max-width: 100%;
   overflow-x: hidden;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  color: var(--text);
 }
 
 img {
   width: 100%;
+  height: auto;
   display: block;
 }
-/* nav section */
+
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+a:hover {
+  cursor: pointer;
+}
+
+/* ---------- Nav ---------- */
 header {
+  position: relative;
+  z-index: 10;
   background-color: #ffffff;
 }
 
@@ -21,438 +56,439 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 112px;
-  width: 100%;
-  padding-top: 2.2vw;
-  padding-bottom: 2.2vw;
-  padding-left: 4vw;
-  padding-right: 4vw;
+  min-height: 72px;
+  padding: 16px 4vw;
 }
 
 .nav_logo {
-  max-height: 30px;
-  max-width: 161px;
+  width: clamp(110px, 12vw, 161px);
+  height: auto;
 }
-ul {
+
+.nav_items ul {
   list-style: none;
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
-  gap: 45px;
+  gap: clamp(20px, 3vw, 45px);
+}
+
+.menu_toggle {
+  display: none; /* shown on tablet/mobile */
+  background: none;
+  border: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 8px;
+  color: var(--text);
+  cursor: pointer;
 }
 .fa-solid {
   display: none;
 }
-/* hero section */
+
+/* ---------- Hero ---------- */
 .hero {
-  width: 100%;
-  height: 95vh;
   position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 95vh;
+  overflow: hidden;
+}
+.hero_bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .hero_img {
   position: absolute;
-  top: 0px;
-  left: 11%;
-  max-height: 90%;
-  max-width: 80%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 92%;
+  object-fit: contain;
 }
-/* main 1 */
+
+/* ---------- Shared card styles ---------- */
+.main_1 > div,
+.main_2 > div,
+.main_4 > div {
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ---------- Main 1 : two wide cards ---------- */
 .main_1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  position: relative;
   gap: 15px;
+  margin-top: 15px;
+}
+#main_gatto,
+#main_hop {
+  width: var(--content-width);
+  aspect-ratio: 21 / 8;
 }
 #main_gatto {
   background-image: url("assets/gatto_bg.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 85%;
-  height: 47vh;
-}
-.gatto_overlay {
-  max-width: 30%;
-  max-height: 50%;
-  position: absolute;
-  left: 15%;
-  margin-top: 2%;
 }
 #main_hop {
   background-image: url("assets/hop_v2.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 85%;
-  height: 47vh;
+}
+.gatto_overlay {
+  position: absolute;
+  left: 7%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32%;
+  max-height: 80%;
+  object-fit: contain;
 }
 .hop_overlay {
-  max-width: 40%;
-  position: relative;
-  left: 8%;
-  margin-top: 8%;
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42%;
+  max-height: 85%;
+  object-fit: contain;
 }
-/* main 2 */
-.main_2 {
-  display: flex;
-  margin-top: 8px;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  gap: 8px;
+
+/* ---------- Main 2 & Main 4 : three-card rows ---------- */
+.main_2,
+.main_4 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+  width: var(--content-width);
+  margin: var(--gap) auto 0;
+}
+.main_2 > div {
+  aspect-ratio: 1 / 1;
+  padding-top: 4%;
+}
+.main_4 > div {
+  aspect-ratio: 1 / 1;
+  padding-top: 4%;
+  color: #ffffff;
 }
 
 #main_ghost {
   background-image: url("assets/ghostback.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 28vw;
-  height: 40vh;
-  padding-top: 2%;
 }
 #main_i3 {
   background-image: url("assets/i3_bg.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 28vw;
-  height: 40vh;
-  padding-top: 2%;
 }
 #main_coco {
   background-image: url("assets/coco_bg.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 28vw;
-  height: 40vh;
-  padding-top: 2%;
 }
-/* main 3 */
+#main_dory {
+  background-image: url("assets/dory.webp");
+}
+#main_win {
+  background-image: url("assets/home_square-Recovered.webp");
+}
+#main_dream {
+  background-image: url("assets/bg.webp");
+}
+
+.ghost_overlay {
+  width: 75%;
+  margin: 0 auto;
+}
+.dory_overlay {
+  width: 100%;
+}
+.win_overlay,
+.dream_overlay {
+  width: 70%;
+  margin: 0 auto;
+}
+.dis_overlay {
+  position: absolute;
+  right: 4%;
+  bottom: 4%;
+  width: clamp(40px, 22%, 70px);
+}
+.stream {
+  position: absolute;
+  left: 6%;
+  bottom: 7%;
+  font-size: clamp(9px, 0.9vw, 13px);
+  white-space: nowrap;
+}
+
+/* ---------- Main 3 : careers ---------- */
 .main_3 {
   display: flex;
+  align-items: stretch;
+  gap: 1.5vw;
+  width: var(--content-width);
+  margin: 20px auto 0;
 }
 .pic {
-  width: 25vw;
-  height: 74vh;
-  position: relative;
-  left: 7vw;
-  margin-top: 20px;
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
-.pic_1 {
-  margin-bottom: 5px;
+.pic_1,
+.pic_2 {
+  flex: 1;
+  min-height: 0;
+}
+.pic_1 img,
+.pic_2 img {
+  height: 100%;
+  object-fit: cover;
 }
 .pic3 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-height: 280px;
   background-image: url("assets/pic3.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 66.5vh;
-  width: 60vw;
-  position: relative;
-  left: 7.5vw;
-  top: 20px;
 }
 .pic_conti {
   color: #ffffff;
-  height: 50%;
-  width: 50%;
-  margin-top: 10vw;
-  margin-left: 5vw;
-  font-size: larger;
+  width: 55%;
+  margin-left: 5%;
+  padding: 24px 0;
+  font-size: clamp(0.95rem, 1.3vw, 1.2rem);
+  line-height: 1.5;
 }
-h1 {
+.pic_conti h1 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
   font-weight: bolder;
+  margin-bottom: 0.5em;
 }
-/* main 4 */
-.main_4 {
+
+/* ---------- Footer ---------- */
+footer {
   display: flex;
-  margin-top: 8px;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  gap: 8px;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 32px;
+  background-color: var(--footer-bg);
+  margin-top: 40px;
+  padding: 48px 4vw;
 }
-#main_dory {
-  background-image: url("assets/dory.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 28vw;
-  height: 45vh;
-  padding-top: 2%;
+.footer {
+  display: flex;
+  gap: 20px;
+  font-size: 1.25rem;
 }
-#main_win {
-  background-image: url("assets/home_square-Recovered.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 28vw;
-  height: 45vh;
-  padding-top: 2%;
-  position: relative;
-  color: #ffffff;
-}
-#main_dream {
-  background-image: url("assets/bg.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 28vw;
-  height: 45vh;
-  padding-top: 2%;
-  color: #ffffff;
-  position: relative;
-}
-.win_overlay {
-  width: 240px;
-  height: 210px;
-  margin-left: 20%;
-}
-.dis_overlay {
-  width: 70px;
-  height: 62px;
-  position: absolute;
-  right: 0;
-  top: 90%;
-  transform: translateY(-50%);
-}
-.stream {
-  margin-left: 95px;
+.a_all {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(32px, 6vw, 100px);
 }
 .foot_a {
   display: flex;
   flex-direction: column;
-}
-footer {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: #f6f6f4;
-  margin-top: 40px;
-  padding-top: 40px;
-  min-height: 40vh;
-  width: 100%;
-}
-.footer {
-  position: relative;
-  top: 40%;
+  gap: 6px;
 }
 .foot_s {
   margin-bottom: 10px;
 }
-.a_all {
-  display: flex;
-  gap: 100px;
-  position: relative;
-  top: 20%;
-}
-a {
-  text-decoration: none;
-  color: rgb(53, 52, 52);
-}
 .foot_last {
-  padding-top: 20px;
+  text-align: center;
+  padding: 20px 4vw;
+  line-height: 1.8;
 }
-a:hover {
-  cursor: pointer;
-}
-/* ---------- Tablet (up to 1024px) ---------- */
+
+/* =========================================================
+   Tablet  (≤ 1024px)
+   ========================================================= */
 @media (max-width: 1024px) {
-  ul {
+  /* nav becomes a dropdown */
+  .menu_toggle {
+    display: block;
+  }
+  .nav_items ul {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  }
+  .nav_items.open ul {
+    display: flex;
+  }
+  .nav_items li {
+    padding: 14px 4vw;
+    border-top: 1px solid #eee;
+  }
+
+  :root {
+    --content-width: 92%;
+  }
+
+  .hero_img {
+    width: 90%;
+  }
+
+  #main_gatto,
+  #main_hop {
+    aspect-ratio: 2 / 1;
+  }
+
+  .main_3 {
+    gap: 2vw;
+  }
+  .pic {
+    flex-basis: 34%;
+  }
+  .pic_conti {
+    width: 70%;
+  }
+
+  /* footer: icons on top, links below */
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .a_all {
+    justify-content: center;
+  }
+}
+
+/* =========================================================
+   Mobile  (≤ 768px)
+   ========================================================= */
+@media (max-width: 768px) {
+  .nav {
+    min-height: 60px;
+    padding: 12px 5vw;
+  }
+  .nav_items li {
+    padding: 14px 5vw;
   }
   .fa-solid {
     display: block;
   }
+
+  .hero {
+    aspect-ratio: 4 / 3;
+  }
   .hero_img {
-    left: 5%;
-    max-width: 90%;
+    width: 100%;
   }
 
   #main_gatto,
   #main_hop {
-    height: 40vh;
+    aspect-ratio: 16 / 9;
+  }
+  .gatto_overlay {
+    left: 5%;
+    width: 45%;
+  }
+  .hop_overlay {
+    left: 4%;
+    width: 55%;
   }
 
-  #main_ghost,
-  #main_i3,
-  #main_coco,
-  #main_dory,
-  #main_win,
-  #main_dream {
-    width: 31vw;
-    height: 35vh;
-  }
-
-  .win_overlay {
-    width: 100%;
-    height: auto;
-  }
-
-  strong {
-    margin-left: 15px;
-    font-size: 11px;
-  }
-
-  .pic {
-    width: 30vw;
-    left: 4vw;
-  }
-
-  .pic3 {
-    width: 62vw;
-    left: 5vw;
-  }
-
-  .pic_conti {
-    margin-top: 6vw;
-    font-size: 1rem;
-  }
-  .foot_last {
-    position: relative;
+  /* stack the card rows */
+  .main_2,
+  .main_4 {
+    grid-template-columns: 1fr;
     gap: 10px;
   }
-}
-
-/* ---------- Mobile (up to 768px) ---------- */
-@media (max-width: 768px) {
-  /* nav */
-  .nav {
-    height: auto;
-    padding: 16px 5vw;
+  .main_2 > div,
+  .main_4 > div {
+    aspect-ratio: 4 / 3;
   }
-  .nav_logo {
-    max-width: 120px;
+  .ghost_overlay {
+    width: auto;
+    max-width: 60%;
+    max-height: 90%;
+    object-fit: contain;
   }
-  ul {
-    gap: 14px;
-    font-size: 12px;
-  }
-
-  /* hero */
-  .hero {
-    height: 60vh;
-  }
-  .hero_bg {
+  .dory_overlay {
     height: 100%;
     object-fit: cover;
   }
-  .hero_img {
-    top: 0;
-    left: 5%;
-    max-width: 90%;
+  .win_overlay,
+  .dream_overlay {
+    width: auto;
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+  }
+  .stream {
+    font-size: 12px;
   }
 
-  /* main 1 */
-  #main_gatto,
-  #main_hop {
-    width: 92%;
-    height: 30vh;
-  }
-  .gatto_overlay {
-    position: relative; /* no more absolute offsets */
-    left: 5%;
-    max-width: 45%;
-  }
-  .hop_overlay {
-    max-width: 55%;
-    left: 4%;
-    margin-top: 4%;
-  }
-
-  /* main 2 and main 4: stack the cards */
-  .main_2,
-  .main_4 {
+  /* careers: images side by side, text box below */
+  .main_3 {
     flex-direction: column;
     gap: 10px;
   }
-  #main_ghost,
-  #main_i3,
-  #main_coco {
-    width: 92%;
-    height: 50vh;
-  }
-  #main_dory,
-  #main_win,
-  #main_dream {
-    width: 92%;
-    height: 40vh;
-  }
-  .ghost_overlay {
-    max-width: 60%;
-    margin: 0 auto;
-  }
-  .win_overlay,
-  .dream_overlay {
-    max-width: 245px;
-    height: 140px;
-    margin: 0 auto;
-  }
-  strong {
-    margin-left: 40%;
-    font-size: 12px;
-  }
-  .dis_overlay {
-    margin-right: 45%;
-  }
-  /* main 3: stack the images and the careers box */
-  .main_3 {
-    flex-direction: column;
-    align-items: center;
-  }
   .pic {
-    width: 92%;
-    height: auto;
-    left: 0;
-    display: flex;
+    flex: none;
+    flex-direction: row;
     gap: 8px;
   }
   .pic_1,
   .pic_2 {
     flex: 1;
-    margin-bottom: 0;
+  }
+  .pic_1 img,
+  .pic_2 img {
+    height: auto;
   }
   .pic3 {
-    width: 92%;
-    height: auto;
     min-height: 50vh;
-    left: 0;
-    top: 0;
-    margin-top: 10px;
   }
   .pic_conti {
     width: 85%;
-    height: auto;
     margin: 0 auto;
     padding: 10vw 0;
     font-size: 1rem;
   }
-}
-.a_all {
-  display: flex;
-  flex-direction: column;
+
+  /* footer links in two columns */
+  .a_all {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 24px;
+    width: 100%;
+    max-width: 420px;
+  }
+  .foot_last {
+    font-size: 0.85rem;
+  }
 }
 
-/* ---------- Small phones (up to 480px) ---------- */
+/* =========================================================
+   Small phones  (≤ 480px)
+   ========================================================= */
 @media (max-width: 480px) {
-  ul {
-    gap: 10px;
-    font-size: 11px;
-  }
   .hero {
-    height: 45vh;
+    aspect-ratio: 1 / 1;
   }
-  #main_ghost,
-  #main_i3,
-  #main_coco,
-  #main_dory,
-  #main_win,
-  #main_dream {
-    height: 32vh;
+  .main_2 > div,
+  .main_4 > div {
+    aspect-ratio: 1 / 1;
   }
   .pic_conti h1 {
     font-size: 1.4rem;
+  }
+  .a_all {
+    gap: 24px 12px;
   }
 }
