@@ -218,8 +218,8 @@ header {
 }
 .stream {
   position: absolute;
-  left: 6%;
-  bottom: 7%;
+  left: 30%;
+  bottom: 30%;
   font-size: clamp(9px, 0.9vw, 13px);
   white-space: nowrap;
 }
