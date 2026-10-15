@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  color: var(--text);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+a:hover {
+  cursor: pointer;
+}
+
+/* ---------- Nav ---------- */
+header {
+  position: relative;
+  z-index: 10;
+  background-color: #ffffff;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  padding: 16px 4vw;
+}
+
+.nav_logo {
+  width: clamp(110px, 12vw, 161px);
+  height: auto;
+}
+
+.nav_items ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 3vw, 45px);
+}
+
+.menu_toggle {
+  display: none; /* shown on tablet/mobile */
+  background: none;
+  border: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 8px;
+  color: var(--text);
+  cursor: pointer;
+}
+.fa-solid {
+  display: none;
+}
