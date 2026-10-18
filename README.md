@@ -1,4 +1,4 @@
- 🎬 Pixar Website Clone
+🎬 Pixar Website Clone
 
 A responsive front-end recreation of the Pixar homepage, built as a personal practice project to explore modern layout, styling, and image-heavy page design.
 
