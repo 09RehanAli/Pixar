@@ -108,17 +108,53 @@ header {
   gap: 2vh;
   padding-top: 12%;
 }
+.text_head {
+  font-weight: 400;
+  font-size: 5ch;
+}
+.text_body {
+  font-weight: 300;
+  font-size: 2ch;
+}
 .hero_video {
-  background-color: red;
-  min-height: 50vh;
+  background-color: #f6f6f4;
+  min-height: 80vh;
   width: 100%;
+}
+#trailers {
+  font-weight: 300;
+  font-size: 5ch;
+  display: block;
+  position: relative;
+  top: 19vh;
+  left: 6vw;
 }
 .yt_vid {
   width: 100%;
   justify-content: space-evenly;
   display: flex;
+  padding-top: 10%;
+  position: absolute;
 }
-.vid {
-  height: 50vh;
-  width: 50%;
+.vid1 {
+  width: 40%;
+}
+.vid2 {
+  width: 40%;
+}
+.trailer {
+  font-weight: 300;
+  font-size: 2ch;
+  display: block;
+  position: relative;
+  bottom: 4vh;
+  left: 15vw;
+}
+.play {
+  height: 6vh;
+  width: 3vw;
+  position: relative;
+  bottom: 12vh; /* Distance from the top edge of the base image */
+  left: 33vw; /* Distance from the left edge of the base image */
+  z-index: 10;
 }
