@@ -72,13 +72,14 @@ header {
   display: none;
 }
 /* hero section */
+
 .hero {
-  position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  max-height: 95vh;
-  overflow: hidden;
+  max-width: 100%;
+  height: 90vh;
+  display: block;
 }
+
 .hero_bg {
   position: absolute;
   inset: 0;
@@ -88,7 +89,7 @@ header {
 }
 .hero_logo {
   position: absolute;
-  top: 50px;
+  top: 120px;
   left: 50%;
   transform: translateX(-50%);
   width: 70%;
@@ -128,6 +129,7 @@ header {
   position: relative;
   top: 19vh;
   left: 6vw;
+  z-index: 10;
 }
 .yt_vid {
   width: 100%;
@@ -157,4 +159,22 @@ header {
   bottom: 12vh; /* Distance from the top edge of the base image */
   left: 33vw; /* Distance from the left edge of the base image */
   z-index: 10;
+}
+.char {
+  background-image: url(assets/TS_char.webp);
+  min-height: 60vh;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#char_head {
+  font-size: 57px;
+  font-weight: 700;
+  color: #feffff;
+  background-color: RGBA(0, 0, 0, 0);
+  justify-content: center;
+  top: 25vh;
+  display: flex;
+  position: relative;
 }
