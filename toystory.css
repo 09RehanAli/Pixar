@@ -178,3 +178,64 @@ header {
   display: flex;
   position: relative;
 }
+.char_bref {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 15vh;
+  background-color: #f6f6f4;
+}
+.char_woody {
+  background-image: url(assets/TS_woody.webp);
+  height: 60vh;
+  width: 30vw;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%;
+}
+.char_name {
+  font-size: 39px;
+  font-weight: 300;
+}
+.char_bio {
+  font-weight: 300;
+  font-size: 20px;
+  margin-top: 2vh;
+}
+.char_img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.img {
+  min-height: 22vh;
+  width: 12vw;
+  margin-top: 5vh;
+}
+.buzz {
+  background-color: white;
+}
+.char_buzz {
+  background-image: url(assets/TS_buzz.webp);
+  height: 60vh;
+  width: 30vw;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+.char_jessie {
+  background-image: url(assets/TS_jessie.webp);
+  height: 60vh;
+  width: 30vw;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
