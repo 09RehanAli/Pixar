@@ -239,3 +239,73 @@ header {
   background-position: center;
   border-radius: 50%;
 }
+.char_bull {
+  background-image: url(assets/TS_bullseye.webp);
+  height: 60vh;
+  width: 30vw;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+.char_smarty {
+  background-image: url(assets/TS_smartpants.webp);
+  height: 60vh;
+  width: 30vw;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+.char_lilypad {
+  background-image: url(assets/TS_liyapad.webp);
+  height: 60vh;
+  width: 30vw;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+.char_bonnie {
+  background-image: url(assets/TS_bonnie.webp);
+  height: 60vh;
+  width: 30vw;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+.char_snappy {
+  background-image: url(assets/TS_snappy.webp);
+  height: 60vh;
+  width: 30vw;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+.char_atlas {
+  background-image: url(assets/TS_atlas.webp);
+  height: 60vh;
+  width: 30vw;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+.char_blaze {
+  background-image: url(assets/TS_blaze.webp);
+  height: 60vh;
+  width: 30vw;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
