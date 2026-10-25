@@ -309,3 +309,19 @@ header {
   background-position: center;
   border-radius: 50%;
 }
+.TS_img {
+  width: 90%;
+  padding-left: 10%;
+}
+.TS_Head {
+  font-size: 45px;
+  font-weight: 300;
+  padding-left: 10%;
+  padding-top: 20px;
+}
+.TS_para {
+  font-size: 18px;
+  font-weight: 300;
+  padding-left: 10%;
+  padding-top: 20px;
+}
