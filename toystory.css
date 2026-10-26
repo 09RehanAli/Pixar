@@ -325,3 +325,13 @@ header {
   padding-left: 10%;
   padding-top: 20px;
 }
+.char_forky {
+  background-image: url(assets/TS_forky.webp);
+  height: 60vh;
+  width: 30vw;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
