@@ -3,231 +3,751 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Toy Story 5</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link href="toystory.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- nav     -->
+    <!-- Nav -->
     <header>
-      <nav>
-        <div class="nav">
-          <div>
-            <img class="nav_logo" src="assets/logo.webp" />
-          </div>
-          <div class="nav_items">
-            <ul>
-              <a href="#"><li>FILMS</li></a>
-              <a href="#"> <li>TECHNOLOGY</li></a>
-              <a href="#"> <li>CAREERS</li></a>
-              <a href="#"> <li>MORE</li></a>
-            </ul>
-            <i class="fa-solid fa-grip-lines"></i>
-          </div>
-        </div>
+      <nav class="nav" aria-label="Main">
+        <a href="#" class="nav_brand"
+          ><img class="nav_logo" src="assets/logo.webp" alt="Pixar"
+        /></a>
+        <button
+          class="menu_toggle"
+          aria-expanded="false"
+          aria-controls="nav_list"
+          aria-label="Toggle menu"
+        >
+          &#9776;
+        </button>
+        <ul class="nav_items" id="nav_list">
+          <li><a href="#">FILMS</a></li>
+          <li><a href="#">TECHNOLOGY</a></li>
+          <li><a href="#">CAREERS</a></li>
+          <li><a href="#">MORE</a></li>
+        </ul>
       </nav>
     </header>
-    <!-- Toy story hero section -->
+
     <main>
-      <div class="hero">
-        <img class="hero_bg" src="assets/hero_bg.webp" />
-        <img class="hero_logo" src="assets/TS_logo.webp" />
-      </div>
-     
-      <div class="hero_cont">
-      <div class="hero_text">
-        <p class="text_head">Toy Meets Tech</p>
-        <p class="text_body">Woody, Buzz Lightyear, Jessie and the rest of the gang’s jobs are challenged when they<br> come face-to-face with Lilypad, a brand-new tablet device that arrives with her own <br>disruptive ideas about what is best for their kid, Bonnie. Will playtime ever be the same? </p>
-      </div></div>
-      <div class="hero_video">
-        <p id="trailers">Trailers</p>
+      <!-- Hero -->
+      <section class="hero">
+        <img class="hero_bg" src="assets/hero_bg.webp" alt="" />
+        <img class="hero_logo" src="assets/TS_logo.webp" alt="Toy Story 5" />
+      </section>
+
+      <section class="hero_text">
+        <h1 class="text_head">Toy Meets Tech</h1>
+        <p class="text_body">
+          Woody, Buzz Lightyear, Jessie and the rest of the gang’s jobs are
+          challenged when they come face-to-face with Lilypad, a brand-new
+          tablet device that arrives with her own disruptive ideas about what is
+          best for their kid, Bonnie. Will playtime ever be the same?
+        </p>
+      </section>
+
+      <!-- Trailers -->
+      <section class="hero_video">
+        <h2 id="trailers">Trailers</h2>
         <div class="yt_vid">
-     <div class="vid1"><a href="https://youtu.be/c51ND9Hdbw0?si=vYFuyybjhyjrIdzJ"><img src="assets/ts5_trailer.webp" alt="Watch The Trailer"><img class="play" src="assets/play.webp"></a><p class="trailer">Watch The Trailer</p></div>
-     <div class="vid2"><a href="https://youtu.be/GGBgf8dcgyY?si=WypO0pyrdRXMYB5V"><img src="assets/TS_trailer.webp" alt="Watch The Trailer"><img class="play" src="assets/play.webp"></a></a><p class="trailer">Watch The Teaser Trailer</p></div></div>
-      </div>
-                           <!--Characters section-->
-      <div class="char">
-        <p id="char_head">T H E&nbsp;&nbsp;   C H A R A C T E R S</p>
-      </div>
-                             <!--Character Woody-->
-      <div class="char_bref">
-        <div class="char_woody"></div>
-        <div class="char_text">
-        <h3 class="char_name">Woody</h3>
-        <p class="char_bio">Woody is off with Bo Peep and her toy-rescue squad on another heroic mission when a <br>surprise call leads the ever-loyal cowboy back to Bonnie’s room. With a new <br>adventurous air about him, Woody must partner with his best pal Buzz Lightyear to help<br> defeat an all-new threat to playtime and find their missing friends, Jessie and Bullseye.<br> There’s never a dull moment rescuing toys!</p>
-        <div class="char_img">
-          <img  class="img" src="assets/TS_woody_pic1.webp">
-          <img  class="img" src="assets/TS_woody_pic2.webp">
-          <img  class="img" src="assets/TS_woody_pic3.jpg">
-          <img  class="img" src="assets/TS_woody_pic4.webp">
+          <figure class="vid">
+            <a
+              class="video_link"
+              href="https://youtu.be/c51ND9Hdbw0?si=vYFuyybjhyjrIdzJ"
+            >
+              <img src="assets/ts5_trailer.webp" alt="Watch the trailer" />
+              <img class="play" src="assets/play.webp" alt="" />
+            </a>
+            <figcaption class="trailer">Watch The Trailer</figcaption>
+          </figure>
+          <figure class="vid">
+            <a
+              class="video_link"
+              href="https://youtu.be/GGBgf8dcgyY?si=WypO0pyrdRXMYB5V"
+            >
+              <img
+                src="assets/TS_trailer.webp"
+                alt="Watch the teaser trailer"
+              />
+              <img class="play" src="assets/play.webp" alt="" />
+            </a>
+            <figcaption class="trailer">Watch The Teaser Trailer</figcaption>
+          </figure>
+        </div>
+      </section>
 
-        </div>
-        </div>
-                                      <!--Character Buzz Lightyear-->
-      </div>
-         <div class="char_bref buzz">
-        <div class="char_buzz"></div>
-        <div class="char_text">
-        <h3 class="char_name">Buzz Lightyear</h3>
-        <p class="char_bio">Buzz Lightyear is reporting for duty in one of his most important roles yet: Deputy to<br> Sheriff Jessie. With his new deputy star at the ready, Buzz jumps at the chance to help<br> Jessie save playtime. But when Jessie and Bullseye suddenly go missing, it’s up to Buzz<br> to return order to Bonnie’s room. His old pal Woody shows up unexpectedly, and Buzz<br> and Woody team up like old times to find Jessie and Bullseye and help their kid.</p>
-        <div class="char_img">
-          <img  class="img" src="assets/TS_buzz_pic1.webp">
-          <img  class="img" src="assets/TS_buzz_pic2.webp">
-          <img  class="img" src="assets/TS_bullseye_pic3.webp">
-          <img  class="img" src="assets/TS_buzz_pic4.webp">
+      <!-- Characters -->
+      <section class="char">
+        <h2 id="char_head">The Characters</h2>
+      </section>
 
-        </div>
-        </div>
-        
-      </div>
-                                            <!--character Jessie-->
-      <div class="char_bref">
-        <div class="char_jessie"></div>
+      <section class="char_bref" aria-labelledby="name_woody">
+        <div class="char_photo char_woody" role="img" aria-label="Woody"></div>
         <div class="char_text">
-        <h3 class="char_name">Jessie</h3>
-        <p class="char_bio">As the new Sheriff in town—or rather, in Bonnie’s room—Jessie leads the gang on an <br>important mission to help Bonnie make friends. But when a new kind of toy draws<br> Bonnie’s interest away and challenges the very idea of playtime, Jessie saddles up her<br> trusty steed Bullseye to help keep Bonnie on track. When Jessie and Bullseye become<br>separated from the gang, they must find their way back to Bonnie with the help of some<br>unexpected new friends of their own. It may be a bumpy ride with some surprising<br> discoveries along the way, but it’s nothing this rootin’-tootin’ cowgirl can’t handle!</p>
-        <div class="char_img">
-          <img  class="img" src="assets/Ts_jessie_pic1.webp">
-          <img  class="img" src="assets/Ts_jessie_pic2.webp">
-          <img  class="img" src="assets/Ts_jessie_pic3.webp">
-          <img  class="img" src="assets/Ts_jessie_pic4.webp">
+          <h3 class="char_name" id="name_woody">Woody</h3>
+          <p class="char_bio">
+            Woody is off with Bo Peep and her toy-rescue squad on another heroic
+            mission when a surprise call leads the ever-loyal cowboy back to
+            Bonnie’s room. With a new adventurous air about him, Woody must
+            partner with his best pal Buzz Lightyear to help defeat an all-new
+            threat to playtime and find their missing friends, Jessie and
+            Bullseye. There’s never a dull moment rescuing toys!
+          </p>
+          <div class="char_img">
+            <img
+              class="img"
+              src="assets/TS_woody_pic1.webp"
+              alt="Woody still 1"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_woody_pic2.webp"
+              alt="Woody still 2"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_woody_pic3.jpg"
+              alt="Woody still 3"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_woody_pic4.webp"
+              alt="Woody still 4"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
 
-        </div>
-        </div>
-        
-      </div>                               <!--Character Bullseye-->
-             <div class="char_bref buzz">
-        <div class="char_bull"></div>
+      <section class="char_bref alt" aria-labelledby="name_buzz">
+        <div
+          class="char_photo char_buzz"
+          role="img"
+          aria-label="Buzz Lightyear"
+        ></div>
         <div class="char_text">
-        <h3 class="char_name">Bullseye</h3>
-        <p class="char_bio">Ever the trusty steed, Bullseye is ready at Bonnie’s side to help her navigate whatever<br> this next chapter of life may bring. But when he and Sheriff Jessie find themselves<br> suddenly separated from the gang, Bullseye must saddle up—with a real-life horse, no<br> less—to find out what it means to really be there for your kid. It’s time to ride like the wind! </p>
-        <div class="char_img">
-          <img  class="img" src="assets/TS_bullseye_pic1.webp">
-          <img  class="img" src="assets/TS_bullseye_pic2.webp">
-          <img  class="img" src="assets/TS_bullseye_pic3.webp">
-          <img  class="img" src="assets/TS_bullseye_pic4.webp">
+          <h3 class="char_name" id="name_buzz">Buzz Lightyear</h3>
+          <p class="char_bio">
+            Buzz Lightyear is reporting for duty in one of his most important
+            roles yet: Deputy to Sheriff Jessie. With his new deputy star at the
+            ready, Buzz jumps at the chance to help Jessie save playtime. But
+            when Jessie and Bullseye suddenly go missing, it’s up to Buzz to
+            return order to Bonnie’s room. His old pal Woody shows up
+            unexpectedly, and Buzz and Woody team up like old times to find
+            Jessie and Bullseye and help their kid.
+          </p>
+          <div class="char_img">
+            <img
+              class="img"
+              src="assets/TS_buzz_pic1.webp"
+              alt="Buzz Lightyear still 1"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_buzz_pic2.webp"
+              alt="Buzz Lightyear still 2"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_bullseye_pic3.webp"
+              alt="Buzz Lightyear still 3"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_buzz_pic4.webp"
+              alt="Buzz Lightyear still 4"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
 
-        </div>
-        </div>
-        
-      </div>
-                                  <!--Character Smarty Pants-->
-             <div class="char_bref ">
-        <div class="char_smarty"></div>
+      <section class="char_bref" aria-labelledby="name_jessie">
+        <div
+          class="char_photo char_jessie"
+          role="img"
+          aria-label="Jessie"
+        ></div>
         <div class="char_text">
-        <h3 class="char_name">Smarty Pants</h3>
-        <p class="char_bio">Potty-mouthed Smarty Pants is a toilet-training tech toy with all the glamour of a roll of <br>toilet paper and an attitude that lives up to his name. With his kid Blaze long past her <br> potty-training days, Smarty has spent years stuck in sleep mode, forgotten in Blaze’s old <br>toy shed. But when he’s unexpectedly recruited for an important mission, this smart<br> aleck gets fresh batteries and a new opportunity to show what he can do…do. </p>
-        <div class="char_img">
-          <img  class="img" src="assets/TS_smartpants_pic1.webp">
-          <img  class="img" src="assets/TS_smartpants_pic2.webp">
-          <img  class="img" src="assets/TS_smartpants_pic3.webp">
-          <img  class="img" src="assets/TS_smartpants_pic4.webp">
+          <h3 class="char_name" id="name_jessie">Jessie</h3>
+          <p class="char_bio">
+            As the new Sheriff in town—or rather, in Bonnie’s room—Jessie leads
+            the gang on an important mission to help Bonnie make friends. But
+            when a new kind of toy draws Bonnie’s interest away and challenges
+            the very idea of playtime, Jessie saddles up her trusty steed
+            Bullseye to help keep Bonnie on track. When Jessie and Bullseye
+            become separated from the gang, they must find their way back to
+            Bonnie with the help of some unexpected new friends of their own. It
+            may be a bumpy ride with some surprising discoveries along the way,
+            but it’s nothing this rootin’-tootin’ cowgirl can’t handle!
+          </p>
+          <div class="char_img">
+            <img
+              class="img"
+              src="assets/Ts_jessie_pic1.webp"
+              alt="Jessie still 1"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/Ts_jessie_pic2.webp"
+              alt="Jessie still 2"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/Ts_jessie_pic3.webp"
+              alt="Jessie still 3"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/Ts_jessie_pic4.webp"
+              alt="Jessie still 4"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
 
-        </div>
-        </div>
-        
-      </div>
-                           <!--Character Lilypad-->
-             <div class="char_bref  buzz">
-        <div class="char_lilypad"></div>
+      <section class="char_bref alt" aria-labelledby="name_bull">
+        <div
+          class="char_photo char_bull"
+          role="img"
+          aria-label="Bullseye"
+        ></div>
         <div class="char_text">
-        <h3 class="char_name">Lilypad</h3>
-        <p class="char_bio">To Bonnie’s real toys’ dismay, frog-shaped smart tablet Lilypad is Bonnie’s new favorite.<br>Completely unbothered that her presence is distressing Jessie and the other toys,<br> Lilypad is always multiple steps ahead of the traditional toys and has her very own<br>solution to help Bonnie connect with friends—chatting with them on “The Pond.” While<br> high-tech Lilypad and timeless Jessie appear to be polar opposites,<br> they have one big thing in common: They’ll do anything to help their kid. </p>
-        <div class="char_img">
-          <img  class="img" src="assets/TS_liyapad_pic1.webp">
-          <img  class="img" src="assets/TS_liyapad_pic2.webp">
-          <img  class="img" src="assets/TS_liyapad_pic3.webp">
-          <img  class="img" src="assets/TS_liyapad_pic4.webp">
+          <h3 class="char_name" id="name_bull">Bullseye</h3>
+          <p class="char_bio">
+            Ever the trusty steed, Bullseye is ready at Bonnie’s side to help
+            her navigate whatever this next chapter of life may bring. But when
+            he and Sheriff Jessie find themselves suddenly separated from the
+            gang, Bullseye must saddle up—with a real-life horse, no less—to
+            find out what it means to really be there for your kid. It’s time to
+            ride like the wind!
+          </p>
+          <div class="char_img">
+            <img
+              class="img"
+              src="assets/TS_bullseye_pic1.webp"
+              alt="Bullseye still 1"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_bullseye_pic2.webp"
+              alt="Bullseye still 2"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_bullseye_pic3.webp"
+              alt="Bullseye still 3"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_bullseye_pic4.webp"
+              alt="Bullseye still 4"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
 
-        </div>
-        </div>
-        
-      </div>
-                                               <!--Character Bonnie-->
-             <div class="char_bref ">
-        <div class="char_bonnie"></div>
+      <section class="char_bref" aria-labelledby="name_smarty">
+        <div
+          class="char_photo char_smarty"
+          role="img"
+          aria-label="Smarty Pants"
+        ></div>
         <div class="char_text">
-        <h3 class="char_name">Bonnie</h3>
-        <p class="char_bio">8-year-old Bonnie is growing up fast, but she’s still the same sweet, shy kid who loves <br>her toys. As she struggles to connect with friends, her new smart tablet Lilypad<br>intervenes to help and encourages Bonnie to chat with her friends from dance class on <br> “The Pond.” Bonnie’s peers don’t seem interested in toys anymore and prefer to spend<br>their free time glued to their screens, which makes her question if she’s too old for<br> playtime altogether. </p>
-        <div class="char_img">
-          <img  class="img" src="assets/TS_bonnie_pic1.webp">
-          <img  class="img" src="assets/TS_bonnie_pic2.webp">
-          <img  class="img" src="assets/TS_bonnie_pic3.webp">
-          <img  class="img" src="assets/TS_blaze_pic4.webp">
+          <h3 class="char_name" id="name_smarty">Smarty Pants</h3>
+          <p class="char_bio">
+            Potty-mouthed Smarty Pants is a toilet-training tech toy with all
+            the glamour of a roll of toilet paper and an attitude that lives up
+            to his name. With his kid Blaze long past her potty-training days,
+            Smarty has spent years stuck in sleep mode, forgotten in Blaze’s old
+            toy shed. But when he’s unexpectedly recruited for an important
+            mission, this smart aleck gets fresh batteries and a new opportunity
+            to show what he can do…do.
+          </p>
+          <div class="char_img">
+            <img
+              class="img"
+              src="assets/TS_smartpants_pic1.webp"
+              alt="Smarty Pants still 1"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_smartpants_pic2.webp"
+              alt="Smarty Pants still 2"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_smartpants_pic3.webp"
+              alt="Smarty Pants still 3"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_smartpants_pic4.webp"
+              alt="Smarty Pants still 4"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
 
-        </div>
-        </div>
-        
-      </div>
-                                                <!--Character Snappy -->
-             <div class="char_bref buzz ">
-        <div class="char_snappy"></div>
+      <section class="char_bref alt" aria-labelledby="name_lilypad">
+        <div
+          class="char_photo char_lilypad"
+          role="img"
+          aria-label="Lilypad"
+        ></div>
         <div class="char_text">
-        <h3 class="char_name">Snappy </h3>
-        <p class="char_bio">Say cheese! Snappy, a peppy little toy camera, is an excitable team player eager to help<br> solve any problem. Understandably a bit nostalgic, Snappy cherishes her picture-perfect<br> memories of time spent with friends and her kid, Blaze. And picture this: Snappy is finally<br> out of the junk drawer she’s lived in for years. </p>
-        <div class="char_img">
-          <img  class="img" src="assets/TS_snappy_pic1.webp">
-          <img  class="img" src="assets/TS_snappy_pic2.webp">
-          <img  class="img" src="assets/TS_snappy_pic3.webp">
-          <img  class="img" src="assets/TS_snappy_pic4.webp">
+          <h3 class="char_name" id="name_lilypad">Lilypad</h3>
+          <p class="char_bio">
+            To Bonnie’s real toys’ dismay, frog-shaped smart tablet Lilypad is
+            Bonnie’s new favorite. Completely unbothered that her presence is
+            distressing Jessie and the other toys, Lilypad is always multiple
+            steps ahead of the traditional toys and has her very own solution to
+            help Bonnie connect with friends—chatting with them on “The Pond.”
+            While high-tech Lilypad and timeless Jessie appear to be polar
+            opposites, they have one big thing in common: They’ll do anything to
+            help their kid.
+          </p>
+          <div class="char_img">
+            <img
+              class="img"
+              src="assets/TS_liyapad_pic1.webp"
+              alt="Lilypad still 1"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_liyapad_pic2.webp"
+              alt="Lilypad still 2"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_liyapad_pic3.webp"
+              alt="Lilypad still 3"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_liyapad_pic4.webp"
+              alt="Lilypad still 4"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
 
-        </div>
-        </div>
-        
-      </div>
-                                              <!--Character Atlas -->
-             <div class="char_bref  ">
-        <div class="char_atlas"></div>
+      <section class="char_bref" aria-labelledby="name_bonnie">
+        <div
+          class="char_photo char_bonnie"
+          role="img"
+          aria-label="Bonnie"
+        ></div>
         <div class="char_text">
-        <h3 class="char_name">Atlas</h3>
-        <p class="char_bio">Cheerful talking toy hippo Atlas knows the way and will stick by your side until you get <br>there—he is equipped with GPS, after all. Long forgotten in Blaze’s tech junk drawer, all <br> this digital map toy needs is a fresh set of batteries, and he’s ready and willing to map <br>the way to adventure.</p>
-        <div class="char_img">
-          <img  class="img" src="assets/TS_atlas_pic1.webp">
-          <img  class="img" src="assets/TS_atlas_pic2.webp">
-          <img  class="img" src="assets/TS_atlas_pic3.webp">
-          <img  class="img" src="assets/TS_atlas_pic4.webp">
+          <h3 class="char_name" id="name_bonnie">Bonnie</h3>
+          <p class="char_bio">
+            8-year-old Bonnie is growing up fast, but she’s still the same
+            sweet, shy kid who loves her toys. As she struggles to connect with
+            friends, her new smart tablet Lilypad intervenes to help and
+            encourages Bonnie to chat with her friends from dance class on “The
+            Pond.” Bonnie’s peers don’t seem interested in toys anymore and
+            prefer to spend their free time glued to their screens, which makes
+            her question if she’s too old for playtime altogether.
+          </p>
+          <div class="char_img">
+            <img
+              class="img"
+              src="assets/TS_bonnie_pic1.webp"
+              alt="Bonnie still 1"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_bonnie_pic2.webp"
+              alt="Bonnie still 2"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_bonnie_pic3.webp"
+              alt="Bonnie still 3"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_blaze_pic4.webp"
+              alt="Bonnie still 4"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
 
-        </div>
-        </div>
-        
-      </div>
-                                            <!--Character Blaze -->
-             <div class="char_bref  buzz">
-        <div class="char_blaze"></div>
+      <section class="char_bref alt" aria-labelledby="name_snappy">
+        <div
+          class="char_photo char_snappy"
+          role="img"
+          aria-label="Snappy"
+        ></div>
         <div class="char_text">
-        <h3 class="char_name">Blaze</h3>
-        <p class="char_bio">Blaze is an independent, tech-savvy 9-and-a-half-year-old who absolutely loves animals<br> and a good dance party. Growing up on a ranch on the outskirts of town with her horse <br> Daffodil and her beloved family pig, Jimmy Dean, Blaze never hesitates to jump in to<br> help her animals and friends alike. Blaze proudly displays her collection of model horses<br> in her room and still enjoys playtime from time to time.</p>
-        <div class="char_img">
-          <img  class="img" src="assets/TS_blaze_pic1.webp">
-          <img  class="img" src="assets/TS_blaze_pic2.webp">
-          <img  class="img" src="assets/TS_blaze_pic3.webp">
-          <img  class="img" src="assets/TS_blaze_pic4.webp">
+          <h3 class="char_name" id="name_snappy">Snappy</h3>
+          <p class="char_bio">
+            Say cheese! Snappy, a peppy little toy camera, is an excitable team
+            player eager to help solve any problem. Understandably a bit
+            nostalgic, Snappy cherishes her picture-perfect memories of time
+            spent with friends and her kid, Blaze. And picture this: Snappy is
+            finally out of the junk drawer she’s lived in for years.
+          </p>
+          <div class="char_img">
+            <img
+              class="img"
+              src="assets/TS_snappy_pic1.webp"
+              alt="Snappy still 1"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_snappy_pic2.webp"
+              alt="Snappy still 2"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_snappy_pic3.webp"
+              alt="Snappy still 3"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_snappy_pic4.webp"
+              alt="Snappy still 4"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
 
-        </div>
-        </div>
-        
-      </div>
-      <div class="TS_img"><img src="assets/TS_play2.webp"></div>
-      <h2 class="TS_Head">Designing Playtime</h2>
-      <p class="TS_para">“Directors Andrew Stanton and Kenna Harris wanted to show the audience what Bonnie’s imagination looks like, because Bonnie is different than Andy,”<br> explains visual effects supervisor Thomas Jordan. “The idea was, ‘What if all kids have their own unique way of imagining playtime?’”</p>
-       <p class="TS_para">Since audiences don’t see inside of Bonnie’s imagination in “Toy Story 4,” the team had freedom to explore new character designs, costumes, textures<br> and more to create playtime scenes that are unique to her.</p>
-        <p class="TS_para">Jordan continues: “We started to narrow in on what we eventually landed on for Bonnie’s imagination—it’s this very imaginative handmade style that<br> looks like how a child would make arts and crafts. We used a pastel chalk drawing technique. It’s very melodramatic, and there’s an absurdity and a sort<br> of tactile handmade quality to it that we all fell in love with.”</p>
-         <p class="TS_para">“The things that look like they should be the simplest are often the most difficult,” adds Collins. “The goal was to show what it might feel like to be inside<br> Bonnie’s imagination. It had to feel fantastical and draw you in, but still be grounded enough in the real world of the film that we could move in and out of<br> her imagination without it feeling jarring. It was a tricky balance.”</p>
-                                                <!--Character Forky -->
-             <div class="char_bref  ">
-        <div class="char_forky"></div>
+      <section class="char_bref" aria-labelledby="name_atlas">
+        <div class="char_photo char_atlas" role="img" aria-label="Atlas"></div>
         <div class="char_text">
-        <h3 class="char_name">Forky</h3>
-        <p class="char_bio">There’s about to be a newly pronounced spork and knife duo in Bonnie’s room now that<br> Forky and Karen Beverly are getting hitched! Forky loves being a toy and teaching his<br>betrothed, Karen Beverly, what he’s learned so far about trash, life and being trash<br> Forky may need a few crafty fixes now and again, but luckily for him, Bonnie loves to<br>craft.</p>
-        <div class="char_img">
-          <img  class="img" src="assets/TS_forky_pic1.webp">
-          <img  class="img" src="assets/TS_forky_pic2.webp">
-          <img  class="img" src="assets/TS_forky_pic3.webp">
-          <img  class="img" src="assets/TS_forky_pic4.webp">
+          <h3 class="char_name" id="name_atlas">Atlas</h3>
+          <p class="char_bio">
+            Cheerful talking toy hippo Atlas knows the way and will stick by
+            your side until you get there—he is equipped with GPS, after all.
+            Long forgotten in Blaze’s tech junk drawer, all this digital map toy
+            needs is a fresh set of batteries, and he’s ready and willing to map
+            the way to adventure.
+          </p>
+          <div class="char_img">
+            <img
+              class="img"
+              src="assets/TS_atlas_pic1.webp"
+              alt="Atlas still 1"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_atlas_pic2.webp"
+              alt="Atlas still 2"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_atlas_pic3.webp"
+              alt="Atlas still 3"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_atlas_pic4.webp"
+              alt="Atlas still 4"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
 
+      <section class="char_bref alt" aria-labelledby="name_blaze">
+        <div class="char_photo char_blaze" role="img" aria-label="Blaze"></div>
+        <div class="char_text">
+          <h3 class="char_name" id="name_blaze">Blaze</h3>
+          <p class="char_bio">
+            Blaze is an independent, tech-savvy 9-and-a-half-year-old who
+            absolutely loves animals and a good dance party. Growing up on a
+            ranch on the outskirts of town with her horse Daffodil and her
+            beloved family pig, Jimmy Dean, Blaze never hesitates to jump in to
+            help her animals and friends alike. Blaze proudly displays her
+            collection of model horses in her room and still enjoys playtime
+            from time to time.
+          </p>
+          <div class="char_img">
+            <img
+              class="img"
+              src="assets/TS_blaze_pic1.webp"
+              alt="Blaze still 1"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_blaze_pic2.webp"
+              alt="Blaze still 2"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_blaze_pic3.webp"
+              alt="Blaze still 3"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_blaze_pic4.webp"
+              alt="Blaze still 4"
+              loading="lazy"
+            />
+          </div>
         </div>
+      </section>
+
+      <section class="playtime">
+        <img
+          src="assets/TS_play2.webp"
+          alt="Toys playing inside Bonnie’s imagination"
+          loading="lazy"
+        />
+        <h2 class="TS_Head">Designing Playtime</h2>
+        <p class="TS_para">
+          “Directors Andrew Stanton and Kenna Harris wanted to show the audience
+          what Bonnie’s imagination looks like, because Bonnie is different than
+          Andy,” explains visual effects supervisor Thomas Jordan. “The idea
+          was, ‘What if all kids have their own unique way of imagining
+          playtime?’”
+        </p>
+        <p class="TS_para">
+          Since audiences don’t see inside of Bonnie’s imagination in “Toy Story
+          4,” the team had freedom to explore new character designs, costumes,
+          textures and more to create playtime scenes that are unique to her.
+        </p>
+        <p class="TS_para">
+          Jordan continues: “We started to narrow in on what we eventually
+          landed on for Bonnie’s imagination—it’s this very imaginative handmade
+          style that looks like how a child would make arts and crafts. We used
+          a pastel chalk drawing technique. It’s very melodramatic, and there’s
+          an absurdity and a sort of tactile handmade quality to it that we all
+          fell in love with.”
+        </p>
+        <p class="TS_para">
+          “The things that look like they should be the simplest are often the
+          most difficult,” adds Collins. “The goal was to show what it might
+          feel like to be inside Bonnie’s imagination. It had to feel
+          fantastical and draw you in, but still be grounded enough in the real
+          world of the film that we could move in and out of her imagination
+          without it feeling jarring. It was a tricky balance.”
+        </p>
+      </section>
+
+      <section class="char_bref" aria-labelledby="name_forky">
+        <div class="char_photo char_forky" role="img" aria-label="Forky"></div>
+        <div class="char_text">
+          <h3 class="char_name" id="name_forky">Forky</h3>
+          <p class="char_bio">
+            There’s about to be a newly pronounced spork and knife duo in
+            Bonnie’s room now that Forky and Karen Beverly are getting hitched!
+            Forky loves being a toy and teaching his betrothed, Karen Beverly,
+            what he’s learned so far about trash, life and being trash. Forky
+            may need a few crafty fixes now and again, but luckily for him,
+            Bonnie loves to craft.
+          </p>
+          <div class="char_img">
+            <img
+              class="img"
+              src="assets/TS_forky_pic1.webp"
+              alt="Forky still 1"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_forky_pic2.webp"
+              alt="Forky still 2"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_forky_pic3.webp"
+              alt="Forky still 3"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_forky_pic4.webp"
+              alt="Forky still 4"
+              loading="lazy"
+            />
+          </div>
         </div>
-           
-   
+      </section>
+      <section class="char_bref alt" aria-labelledby="name_forky">
+        <div class="char_photo char_karen" role="img" aria-label="Forky"></div>
+        <div class="char_text">
+          <h3 class="char_name" id="name_forky">Karen Beverly</h3>
+          <p class="char_bio">
+            It’s a big day for bedazzled plastic-knife-turned-toy Karen Beverly
+            and toy spork Forky—they’re getting married, and the crew couldn’t
+            be happier for the newlyweds. Karen Beverly is still learning a lot
+            about the world, trash and what it means to be a toy, but she does
+            know she loves her new wedding outfit—and Forky, of course!.
+          </p>
+          <div class="char_img">
+            <img
+              class="img"
+              src="assets/TS_karenBeverly_pic1.webp"
+              alt="Forky still 1"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_karenBeverly_pic2.webp"
+              alt="Forky still 2"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_karenBeverly_pic3.webp"
+              alt="Forky still 3"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_karenBeverly_pic4.webp"
+              alt="Forky still 4"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="char_bref" aria-labelledby="name_forky">
+        <div
+          class="char_photo char_hi-tech"
+          role="img"
+          aria-label="Forky"
+        ></div>
+        <div class="char_text">
+          <h3 class="char_name" id="name_forky">
+            Hi-Tech Edition Buzz Lightyear
+          </h3>
+          <p class="char_bio">
+            50 shiny, brand-new Hi-Tech Edition Buzz Lightyear action figures
+            have unexpectedly washed ashore. Stuck in space ranger mode, these
+            incredibly dedicated action figures must navigate the real world
+            with the understanding that they must work together to return to
+            Star Command. But…who or what is Star Command?
+          </p>
+          <div class="char_img">
+            <img
+              class="img"
+              src="assets/TS_hitechBuzz_pic1.webp"
+              alt="Forky still 1"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_hitechBuzz_pic2.webp"
+              alt="Forky still 2"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_hitechBuzz_pic3.webp"
+              alt="Forky still 3"
+              loading="lazy"
+            />
+            <img
+              class="img"
+              src="assets/TS_hitechBuzz_pic4.webp"
+              alt="Forky still 4"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer>
+      <div class="footer">
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+      <div class="a_all">
+        <div class="foot_a">
+          <strong class="foot_s">F I L M S</strong>
+          <a href="#">Features</a>
+          <a href="#">Shorts</a>
+          <a href="#">Series</a>
+          <a href="#">SparkShorts</a>
+          <a href="#">Documentaries</a>
+        </div>
+        <div class="foot_a">
+          <strong class="foot_s">T E C H </strong>
+          <a href="#">Tech at Pixar</a>
+          <a href="#">RenderMan</a>
+          <a href="#">OpenUSD</a>
+          <a href="#">Software R&D</a>
+          <a href="#">Libraries</a>
+        </div>
+        <div class="foot_a">
+          <strong class="foot_s">C A R E E R S </strong>
+          <a href="#">Careers At Pixar</a>
+          <a href="#">Internships</a>
+          <a href="#">Life At Pixar</a>
+        </div>
+        <div class="foot_a">
+          <strong class="foot_s">M O R E</strong>
+          <a href="#">Leaders</a>
+          <a href="#">Our Story</a>
+          <a href="#">Events</a>
+          <a href="#">Pixar In A Box</a>
+          <a href="#">FAQ’s </a>
+        </div>
+      </div>
+    </footer>
+
+    <center>
+      <div class="foot_last">
+        <p>Your Privacy choices</p>
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Your US State Privacy Rights</a> |
+        <a href="#">Online Privacy Policy</a> |
+        <a href="#">Interest Based Ads</a> | <br />
+        <p>&copy 1986-2026 Diney-Pixar</p>
+      </div>
+    </center>
   </body>
 </html>
