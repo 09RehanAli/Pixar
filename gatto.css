@@ -101,3 +101,8 @@ header {
   height: 92%;
   object-fit: contain;
 }
+.hero_img {
+  width: 90%;
+  padding-left: 10%;
+  margin-top: 5%;
+}
