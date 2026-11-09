@@ -106,3 +106,21 @@ header {
   padding-left: 10%;
   margin-top: 5%;
 }
+.play {
+  position: relative;
+  inset: 0;
+
+  margin: auto;
+  width: clamp(40px, 6vw, 72px);
+  height: auto;
+  left: 30vw;
+  top: -13vh;
+}
+.text_body {
+  font-weight: 300;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  max-width: 70ch;
+  position: relative;
+  left: 30vw;
+  top: -5vh;
+}
