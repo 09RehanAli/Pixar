@@ -124,3 +124,50 @@ header {
   left: 30vw;
   top: -5vh;
 }
+.main {
+  display: flex;
+  width: 100%;
+}
+.poster {
+  width: 60%;
+}
+.poster_img {
+  height: 100vh;
+  width: 40vw;
+  position: relative;
+  left: 10%;
+}
+.content {
+  width: 40%;
+
+  height: auto;
+  position: relative;
+  right: 10%;
+}
+hr {
+  margin-top: 8%;
+}
+.heading {
+  font-size: 39px;
+  font-weight: 700;
+  margin-top: 8%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+.heading_text {
+  margin-left: 5%;
+}
+.sub_head {
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+.sub_cont {
+  margin-left: 5%;
+  margin-top: 5%;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+}
