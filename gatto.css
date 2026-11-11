@@ -171,3 +171,66 @@ hr {
   line-height: 1.6;
   font-size: clamp(1rem, 1.4vw, 1.25rem);
 }
+.site_footer {
+  background: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: clamp(32px, 6vw, 80px) 6vw;
+}
+
+.footer_cols {
+  display: flex;
+  gap: clamp(32px, 6vw, 96px);
+  flex-wrap: wrap;
+}
+
+.site_footer h4 {
+  letter-spacing: 0.2em;
+  margin-bottom: 16px;
+}
+
+.site_footer li {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.footer_legal {
+  max-width: 280px;
+  text-align: left;
+  line-height: 1.6;
+}
+/* ---------- Footer ---------- */
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 32px;
+  background-color: #f6f6f4;
+  margin-top: 40px;
+  padding: 48px 4vw;
+}
+.footer {
+  display: flex;
+  gap: 20px;
+  font-size: 1.25rem;
+}
+.a_all {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(32px, 6vw, 100px);
+}
+.foot_a {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.foot_s {
+  margin-bottom: 10px;
+}
+.foot_last {
+  text-align: center;
+  padding: 20px 4vw;
+  line-height: 1.8;
+}
